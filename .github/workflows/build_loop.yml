@@ -222,7 +222,7 @@ jobs:
       # Customize Loop: Download and apply patches
       - name: Customize Loop
         run: |
-
+          curl https://github.com/majio87/LibreTransmitter/commit/1ba7d979a20badfb6febbc890a8d8a16dc25d795.patch | git apply -v --directory=LibreTransmitter
           # LoopWorkspace patches
           # -applies any patches located in the LoopWorkspace/patches/ directory
           if $(ls ./patches/* &> /dev/null); then
